@@ -2,16 +2,16 @@
 class Ecsrun < Formula
   desc "Easily run one-off tasks against an ECS Task Definition."
   homepage "https://github.com/masterpointio/ecsrun"
-  version "0.1.1"
+  version "0.1.2"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/masterpointio/ecsrun/releases/download/v0.1.1/ecsrun_Darwin_x86_64.tar.gz"
-    sha256 "5e59c771ecedb1661e7c3a76e0f48f60eb63792d8cf3899401ed1d526bc5f62b"
+    url "https://github.com/masterpointio/ecsrun/releases/download/v0.1.2/ecsrun_Darwin_x86_64.tar.gz"
+    sha256 "fd52b87a5f5e7ded8d03a4e148b5ac4c7f97afce929814ccc24c02e6109dc158"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/masterpointio/ecsrun/releases/download/v0.1.1/ecsrun_Linux_x86_64.tar.gz"
-      sha256 "33b58e4e19beec14522131620a89bd9c6760e8cfad486d9e4da4ef0b79d5f3ac"
+      url "https://github.com/masterpointio/ecsrun/releases/download/v0.1.2/ecsrun_Linux_x86_64.tar.gz"
+      sha256 "86d3c57c9d61bbb04a175eba4861cf19ac5840a8626369f5744946b2c1b8357a"
     end
   end
 
