@@ -5,20 +5,20 @@
 class Ecsrun < Formula
   desc "Easily run one-off tasks against an ECS Task Definition."
   homepage "https://github.com/masterpointio/ecsrun"
-  version "0.1.6"
+  version "0.1.7"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/masterpointio/ecsrun/releases/download/v0.1.6/ecsrun_Darwin_arm64.tar.gz"
-      sha256 "b8b8e7c4d415b41b115a0ac233849fb5ee3e2df79d197f359e99971d04037233"
+      url "https://github.com/masterpointio/ecsrun/releases/download/v0.1.7/ecsrun_Darwin_arm64.tar.gz"
+      sha256 "4a248c522272e8dff99cf5ee2926bd70b5d60f4d362316baaf9d3046fb510a36"
 
       def install
         bin.install "ecsrun"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/masterpointio/ecsrun/releases/download/v0.1.6/ecsrun_Darwin_x86_64.tar.gz"
-      sha256 "62c16fbbcba66d859e23ddfb1e9fc778620e509f9e71f57862bf92cadcd08545"
+      url "https://github.com/masterpointio/ecsrun/releases/download/v0.1.7/ecsrun_Darwin_x86_64.tar.gz"
+      sha256 "cbf192809c870085d5ca0c79cba1325fd9c6acf970bb95527cadd36dad5244bc"
 
       def install
         bin.install "ecsrun"
@@ -27,17 +27,17 @@ class Ecsrun < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/masterpointio/ecsrun/releases/download/v0.1.6/ecsrun_Linux_arm64.tar.gz"
-      sha256 "083becc851f195580288689783ebabcb9d74fbf5c5570d565856117bba136ab7"
+    if Hardware::CPU.intel?
+      url "https://github.com/masterpointio/ecsrun/releases/download/v0.1.7/ecsrun_Linux_x86_64.tar.gz"
+      sha256 "c34d57ac113d6236e6c5d4a3c420fac4a9c54166ad430b1fbcefd6c5987938ff"
 
       def install
         bin.install "ecsrun"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/masterpointio/ecsrun/releases/download/v0.1.6/ecsrun_Linux_x86_64.tar.gz"
-      sha256 "e74b145310cf9cbce1a165d50cbb9a718942e4209d4c4ce09f7d5869cb8b4bac"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/masterpointio/ecsrun/releases/download/v0.1.7/ecsrun_Linux_arm64.tar.gz"
+      sha256 "8814e94ce95423ac3f764f3f3521ca5f98c692551783d9ffd29c5ebca4b9d329"
 
       def install
         bin.install "ecsrun"
